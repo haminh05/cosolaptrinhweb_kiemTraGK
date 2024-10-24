@@ -1,0 +1,170 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f7f8fc;
+  margin: 0;
+  padding: 0;
+  background-image: url("backGround.jpg"); /* Hình nền */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+/* Header - Back arrow and progress status */
+.header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.back-arrow {
+  display: flex;
+  align-items: center;
+}
+
+.back-arrow a {
+  text-decoration: none;
+  font-size: 30px;
+  color: rgba(117, 125, 138, 1);
+  margin-right: 10px;
+}
+.progress-status {
+  background-color: rgba(85, 82, 217, 0.08); /* Màu nền của hộp trạng thái */
+  color: rgba(111, 111, 255, 1); /* Màu chữ */
+  padding: 5px 10px; /* Khoảng cách bên trong hộp */
+  border-radius: 5px; /* Bo góc */
+  font-weight: bold; /* Chữ đậm */
+}
+
+.progress-text {
+  font-size: 16px;
+  color: #555;
+}
+
+.progress-status {
+  font-size: 14px;
+  color: #999;
+  margin-left: 10px;
+}
+h2 {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.description {
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.progress {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  position: relative; /* Để sử dụng vị trí cho đường kẻ nối */
+}
+
+.step {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  position: relative; /* Để có thể định vị đường kẻ nối */
+}
+
+.step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 50px; /* Chiều dài của đường kẻ nối */
+  height: 2px; /* Độ dày của đường kẻ nối */
+  background-color: #ccc; /* Màu sắc của đường kẻ nối */
+  transform: translateY(-50%); /* Giữa đường kẻ nối với bước */
+  margin-left: 25px;
+}
+.step:first-child::after {
+  background-color: #4b57f5; /* Màu xanh cho đường kẻ nối đầu tiên */
+}
+
+.step.active {
+  background-color: #4b57f5;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Align items in a row for both Email-Phone and City-ZIP with a gap */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Adjust this value to increase/decrease the space */
+}
+.form-row .form-group {
+  margin-bottom: 15px; /* Giữ khoảng cách giữa các hàng */
+  margin-right: 20px; /* Thêm khoảng cách bên phải cho các phần tử */
+}
+
+.form-row .form-group:last-child {
+  margin-right: 0; /* Loại bỏ khoảng cách bên phải của phần tử cuối cùng */
+}
+
+.half {
+  width: 48%;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #4b57f5;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #3a46d5;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}

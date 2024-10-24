@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Verification</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="back-arrow">
+        <a href="#" onclick="goBack()">←</a>
+        <span class="progress-text">Account verification</span>
+        <span class="progress-status">In progress</span>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="progress">
+        <span class="step active">1</span>
+        <span class="step">2</span>
+        <span class="step">3</span>
+        <span class="step">4</span>
+      </div>
+
+      <h2>Business Structure</h2>
+      <p class="description">
+        DigiRoad collects this information to better understand and serve your
+        business.
+      </p>
+
+      <form id="businessForm">
+        <!-- Email and Phone fields in the same row -->
+        <div class="form-row">
+          <div class="form-group half">
+            <label for="email">Business Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" />
+            <small class="error" id="emailError"></small>
+          </div>
+
+          <div class="form-group half">
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" name="phone" placeholder="Phone" />
+            <small class="error" id="phoneError"></small>
+          </div>
+        </div>
+
+        <!-- Address field -->
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input
+            type="text"
+            id="address"
+            name="address"
+            placeholder="Address line"
+          />
+          <small class="error" id="addressError"></small>
+        </div>
+
+        <!-- City and ZIP fields in the same row -->
+        <div class="form-row">
+          <div class="form-group half">
+            <label for="city"></label>
+            <input type="text" id="city" name="city" placeholder="City" />
+            <small class="error" id="cityError"></small>
+          </div>
+
+          <div class="form-group half">
+            <label for="zip"></label>
+            <input type="text" id="zip" name="zip" placeholder="ZIP" />
+            <small class="error" id="zipError"></small>
+          </div>
+        </div>
+
+        <button type="submit" class="btn">Continue</button>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
